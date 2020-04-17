@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC
+ "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" 
+ "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <context id="contextFer">
+    <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/batistest" driverClass="com.mysql.jdbc.Driver" password="" userId="root" />
+    <javaModelGenerator targetPackage="fer.ftb.bd.domain" targetProject="myBatisMVC" />
+    <sqlMapGenerator targetPackage="fer.ftb.bd.mappers" targetProject="myBatisMVC" />
+   	<!--<javaClientGenerator targetPackage="???" targetProject="???" type="XMLMAPPER" />-->
+    <table schema="batistest" tableName="Cliente">
+      <!-- <columnOverride column="???" property="???" /> -->
+      <property name="usActualColumnsNames" value="true"/>
+    </table>
+  </context>
+</generatorConfiguration>
