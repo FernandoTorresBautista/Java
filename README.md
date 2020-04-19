@@ -33,6 +33,33 @@ Se configuran los parámetros de acceso a la base de datos en mybatis-config.xml
 Se agrega una consulta usando un servlet para listar clientes de ejemplo cómo controlador. Agregar los mappers ClienteMapper.xml y ClienteMapper.java la interface que define el método que se ha mapeado en el xml.<br>
 Se define el método del servlet para la consulta, y por último; Mapear mybatis en web.xml donde se agrega el servlet y su mapping.
 
+## 5. MvnSpring
+Proyecto integrando Maven, MyBatis, Spring, JSF y Primefaces. Además de la optimización con el patrón singleton. <br>
+- spring core|web +v3.1, jsf +v2.15, primefaces +v5.1, junit v4.12
+- Implementación en 3 capas,
+  - Presentacíon 
+  - Servicio y 
+  - Persistencia
+
+Usando la DB del proyecto 4 y sin cambiar nada. <br>
+En general se tienen 2 métodos, listar y actualizar. <br>
+Se agrega el paquete de DAO en sus repectivos class e interfaz. <br>
+Se agrega el paquete de service en sus repectivos class e interfaz. <br>
+Se agrega el paquete managedBean para los elementos de entrada y salida de la vista. <br> 
+Se agrega MyBatisSqlSessionFactorySingleton en un nuevo paquete db.util para mejorar la comunicación entre daos y mappers. <br>
+Se pueden apreciar 3 vistas simples usando primefaces, e implementando los métodos del managedBean. <br>
+Por últumo, en web.xml, se mapea Jsf, el contexto en este caso Development para mi local y por último spring. <br>
+
 ## patronDecorador
 Ejemplo de clases abstractas usadas para aplicar un patrón decorador de bebidas.
- 
+
+## 
+
+
+
+
+
+
+
+
+###### Java Maven JSP Spring MyBatis JSF PrimeFaces

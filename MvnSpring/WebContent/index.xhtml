@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>Index</title>
+</h:head>
+<h:body>
+	<h3>Maven <br/> MyBatis <br/> Spring <br/> JSF <br/> Primefaces <br/> Base de datos </h3>
+		<h:dataTable id="clientes" var="cli" 
+				value="#{clienteBean.getClienteList()}" editable="false"  
+    			styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row"
+    		>
+
+			<h:column>
+				<f:facet name="header">id</f:facet>
+				#{cli.id}
+			</h:column>
+	
+			<h:column>
+				<f:facet name="header">Nombre</f:facet>
+				#{cli.nombre}
+			</h:column>
+	
+			<h:column>
+				<f:facet name="header">Apellido</f:facet>
+				#{cli.apellido}
+			</h:column>
+	
+			<h:column>
+				<f:facet name="header">email</f:facet>
+				#{cli.email}
+			</h:column>
+	
+			<h:column>
+				<f:facet name="header">estado</f:facet>
+				#{cli.estado}
+			</h:column>
+		</h:dataTable>
+	
+	<p>
+		<h:link value="Tabla de Clientes con formato" outcome="Prime1" />
+	</p>
+	<p>
+		<h:link value="Tabla de Clientes editable" outcome="Prime2" />
+	</p>
+</h:body>
+</html>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>ClientesList</title>
+</h:head>
+<h:body>
+	<h3>Maven <br/> MyBatis <br/> Spring <br/> JSF <br/> Primefaces <br/> Base de datos </h3>
+	<h:form id="form">
+		<p:dataTable id="clientes" var="cli"
+			value="#{clienteBean.getClienteList()}" editable="false"
+			style="margin-bottom:20px">
+			<f:facet name="header">
+				Clientes
+			</f:facet>
+
+			<p:column headerText="Id">
+				<h:outputText value="#{cli.id}" />
+			</p:column>
+
+			<p:column headerText="Nombre">
+				<h:outputText value="#{cli.nombre}" />
+			</p:column>
+
+			<p:column headerText="Apellido">
+				<h:outputText value="#{cli.apellido}" />
+			</p:column>
+
+			<p:column headerText="Email">
+				<h:outputText value="#{cli.email}" />
+			</p:column>
+
+			<p:column headerText="Estado">
+				<h:outputText value="#{cli.estado}" />
+			</p:column>
+		</p:dataTable>
+	</h:form>
+	<p>
+		<h:link value="Home" outcome="index" />
+	</p>
+</h:body>
+</html>
